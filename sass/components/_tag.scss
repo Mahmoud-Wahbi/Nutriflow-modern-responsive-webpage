@@ -1,0 +1,218 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0.3rem 1rem;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+
+  border: 1px solid currentColor;
+  background: transparent;
+  transition: all 0.6s ease;
+
+  &--protein {
+    background: #e8f0ff;
+    color: #2f6bff;
+  }
+
+  &--omega-3 {
+    background: #ffe7d6;
+    color: #b45309;
+  }
+
+  &--Mediterranean {
+    background: #fef3c7;
+    color: #b45309;
+  }
+
+  &--Gluten-Free {
+    background: #ccfbf1;
+    color: #0f766e;
+  }
+
+  &--vegan {
+    background: #dcfce7;
+    color: #166534;
+  }
+
+  &--plant {
+    background: #ccfbf1;
+    color: #0f766e;
+  }
+
+  &--fiber {
+    background: #fef3c7;
+    color: #b45309;
+  }
+
+  &--balanced {
+    background: #eaf7f0;
+    color: #1f9d6a;
+  }
+
+  &--energy {
+    background: #fff4e5;
+    color: #f59e0b;
+  }
+
+  &--vegan {
+    background: #e9fbf0;
+    color: #16a34a;
+  }
+
+  &--vegetarian {
+    background: #dcfce7;
+    color: #166534;
+  }
+
+  &--greens {
+    background: #d1fae5;
+    color: #065f46;
+  }
+
+  &--low-cal {
+    background: #dbeafe;
+    color: #1d4ed8;
+  }
+
+  &--vitamins {
+    background: #fef3c7;
+    color: #b45309;
+  }
+
+  &--keto {
+    background: #e9d5ff;
+    color: #6b21a8;
+  }
+
+  &--low-carb {
+    background: #dbeafe;
+    color: #1d4ed8;
+  }
+
+  &--fats {
+    background: #fef3c7;
+    color: #b45309;
+  }
+
+  &--healthy {
+    background: #dcfce7;
+    color: #166534;
+  }
+
+  &--light {
+    background: #f3f4f6;
+    color: #374151;
+  }
+
+  &--mediterranean {
+    background: #fef3c7;
+    color: #b45309;
+  }
+
+  &--hummus {
+    background: #e0f2fe;
+    color: #0369a1;
+  }
+
+  &--rice-bowl {
+    background: #ffe4e6;
+    color: #9f1239;
+  }
+
+  &--lean-protein {
+    background: #ede9fe;
+    color: #5b21b6;
+  }
+
+  &--fiber-rich {
+    background: #ecfccb;
+    color: #3f6212;
+  }
+
+  &--balanced-bowl {
+    background: #ffefd5;
+    color: #9a3412;
+  }
+
+  &--coconut {
+    background: #e0f7fa;
+    color: #006064;
+  }
+
+  &--breakfast {
+    background: #fff3e0;
+    color: #e65100;
+  }
+
+  &--energy {
+    background: #f3e5f5;
+    color: #6a1b9a;
+  }
+
+  &--dairy-free {
+    background: #e8f5e9;
+    color: #1b5e20;
+  }
+
+  &--ramen {
+    background: #fff1f2;
+    color: #9f1239;
+  }
+
+  &--umami {
+    background: #fef3c7;
+    color: #92400e;
+  }
+
+  &--noodles {
+    background: #e0f2fe;
+    color: #075985;
+  }
+
+  &--asian {
+    background: #dcfce7;
+    color: #166534;
+  }
+
+  &--pasta {
+    background: #fff7ed;
+    color: #9a3412;
+  }
+
+  &--tomato {
+    background: #fee2e2;
+    color: #991b1b;
+  }
+
+  &--basil {
+    background: #dcfce7;
+    color: #166534;
+  }
+
+  &--italian {
+    background: #e0f2fe;
+    color: #075985;
+  }
+
+  &--fajita {
+    background: #fff7ed;
+    color: #9a3412;
+  }
+
+  &--smoky {
+    background: #fee2e2;
+    color: #991b1b;
+  }
+
+  &--spicy {
+    background: #ffe4e6;
+    color: #9f1239;
+  }
+
+  &--tex-mex {
+    background: #e0f2fe;
+    color: #075985;
+  }
+}

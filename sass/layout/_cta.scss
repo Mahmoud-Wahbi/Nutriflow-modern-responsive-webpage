@@ -1,0 +1,223 @@
+.cta {
+  position: relative;
+  overflow: hidden;
+  padding: 12rem 4rem;
+  background: linear-gradient(180deg, #f4f6f7 0%, #eef3ee 100%);
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(30rem, 0.9fr);
+    align-items: center;
+    gap: 4rem;
+    max-width: 124rem;
+    margin: 0 auto;
+    padding: 5rem 5rem 5.4rem;
+    border: 1px solid rgba($color-grey-light-4, 0.28);
+    border-radius: 3.2rem;
+    background: linear-gradient(
+      135deg,
+      rgba(#fff, 0.96),
+      rgba($color-primary-ultra-lighter, 0.8)
+    );
+    box-shadow: 0 2.2rem 4.8rem rgba(17, 24, 39, 0.08);
+    backdrop-filter: blur(10px);
+  }
+
+  &__copy {
+    display: grid;
+    gap: 1.4rem;
+  }
+
+  &__heading {
+    max-width: 56rem;
+    line-height: 1.08;
+  }
+
+  &__text {
+    max-width: 54rem;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color-grey-dark-1;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-top: 0.4rem;
+  }
+
+  &__highlights {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  &__highlight {
+    display: grid;
+    gap: 0.35rem;
+    padding: 1.3rem 1.4rem 1.4rem;
+    border: 1px solid rgba($color-grey-light-4, 0.22);
+    border-radius: 1.8rem;
+    background: rgba(#fff, 0.78);
+    box-shadow: 0 0.8rem 2rem rgba(17, 24, 39, 0.05);
+
+    strong {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: $color-grey-dark-3;
+    }
+
+    span {
+      font-size: 1.25rem;
+      line-height: 1.5;
+      color: $color-grey-dark-1;
+    }
+  }
+
+  &__visual {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 42rem;
+  }
+
+  &__illustration {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 34rem);
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__blob {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    &--back {
+      top: 0.6rem;
+      width: min(32rem, 100%);
+      opacity: 0.34;
+      transform: translateY(-4%) rotate(10deg);
+    }
+  }
+
+  &__note {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    bottom: 0.4rem;
+    transform: translateX(-50%);
+    padding: 1rem 1.4rem;
+    border-radius: 999px;
+    background: rgba($color-grey-dark-3, 0.94);
+    color: $color-grey-light-1;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-align: center;
+    box-shadow: 0 1.1rem 2.4rem rgba(17, 24, 39, 0.16);
+  }
+
+  &__decor {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    &--left {
+      top: 3rem;
+      left: -6rem;
+      width: 20rem;
+      opacity: 0.16;
+      transform: rotate(-12deg);
+    }
+
+    &--right {
+      right: -5rem;
+      bottom: 2.5rem;
+      width: 18rem;
+      opacity: 0.12;
+      transform: rotate(12deg);
+    }
+  }
+
+  @media only screen and (max-width: 56.25em) {
+    padding: 7rem 2rem 7rem;
+
+    &__content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      padding: 3.4rem 2.4rem 2.8rem;
+    }
+
+    &__highlights {
+      grid-template-columns: 1fr;
+    }
+
+    &__visual {
+      order: -1;
+      min-height: 31rem;
+    }
+
+    &__illustration {
+      width: min(100%, 28rem);
+    }
+
+    &__blob--back {
+      width: min(26rem, 100%);
+    }
+
+    &__decor {
+      opacity: 0.08;
+
+      &--left {
+        left: -9rem;
+      }
+
+      &--right {
+        right: -10rem;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 37.5em) {
+    &__content {
+      padding: 2.8rem 1.8rem 2.4rem;
+      border-radius: 2.4rem;
+    }
+
+    &__actions {
+      flex-direction: column;
+    }
+
+    .btn:link,
+    .btn:visited {
+      width: 100%;
+    }
+
+    &__note {
+      max-width: 22rem;
+    }
+  }
+}

@@ -1,0 +1,147 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 50%;
+  min-height: 100vh;
+
+  @include respond(tab-port) {
+    min-height: 110vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 60%;
+  }
+
+  @include respond(phone) {
+    min-height: 75vh;
+  }
+
+  @include respond(small-phone) {
+    min-height: 80vh;
+  }
+
+  &__video-box {
+    background-color: $color-primary-ultra-lighter;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__text-box {
+    display: grid;
+    align-content: center;
+    row-gap: 1.5rem;
+    grid-template-rows:
+      minmax(23rem, min-content) min-content
+      min-content;
+    align-content: center;
+    background-color: $color-primary;
+
+    padding: 10rem 10rem 10rem 2rem;
+
+    @include respond(tab-port) {
+      padding: 3rem 9rem;
+
+      grid-template-rows:
+        minmax(10rem, min-content) min-content
+        min-content;
+
+      row-gap: 2.5rem;
+    }
+
+    @include respond(phone) {
+      padding: 3.5rem 3.5rem 2rem 3.5rem;
+
+      grid-template-rows:
+        minmax(10rem, min-content) min-content
+        min-content;
+
+      row-gap: 1.5rem;
+    }
+  }
+
+  &__header {
+    align-self: end;
+    @include respond(phone) {
+      padding-right: 8rem;
+    }
+
+    @include respond(small-phone) {
+      padding-right: 4rem;
+    }
+
+    span {
+      position: relative;
+      display: inline-block;
+
+      animation: move-up 1.5s ease;
+
+      &:nth-last-of-type(1) {
+        animation-delay: 0.3s;
+      }
+
+      &:nth-last-of-type(2) {
+        animation-delay: 0.5s;
+      }
+
+      &:nth-last-of-type(3) {
+        animation-delay: 0.7s;
+      }
+
+      transition: all 0.3s;
+    }
+
+    span:hover {
+      text-shadow:
+        0 0 0.5rem rgba($color-primary, 0.4),
+        0 0 1rem rgba($color-primary, 0.3);
+      transform: translateY(-3px);
+      cursor: pointer;
+    }
+
+    span::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      background-image: linear-gradient(
+        120deg,
+        rgba($color-primary, 0.4),
+        rgba(#fff, 0.9),
+        rgba($color-primary, 0.4)
+      );
+
+      background-size: 250% 100%;
+      background-position: -250% 0;
+
+      background-clip: text;
+      -webkit-background-clip: text;
+
+      color: transparent;
+
+      animation: highlight-sweep 5s ease forwards 2.5s;
+      pointer-events: none;
+    }
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    color: $color-primary-ultra-lighter;
+
+    @include respond(phone) {
+      font-size: 1.8rem;
+    }
+
+    @include respond(small-phone) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__button {
+    padding-top: 2.5rem;
+  }
+}

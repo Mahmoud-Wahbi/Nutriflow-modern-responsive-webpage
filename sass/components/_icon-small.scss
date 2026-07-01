@@ -1,0 +1,24 @@
+.icon-small {
+  position: relative;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    stroke: $color-primary-dark;
+    stroke-width: 1.5;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: rgba($color-primary-lighter, 0.2);
+  }
+}

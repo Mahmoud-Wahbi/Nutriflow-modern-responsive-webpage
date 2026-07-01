@@ -1,0 +1,80 @@
+.options-list {
+  grid-column: 1 / 3;
+
+  @include respond(tab-port) {
+    grid-column: 1 / -1;
+    grid-row: 6 / 7;
+  }
+
+  padding: 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 1.8rem 1.8rem;
+
+  &__btn {
+    width: 85%;
+    height: 4.5rem;
+
+    @include respond(tab-port) {
+      width: 90%;
+    }
+
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: $color-grey-light-1;
+    cursor: pointer;
+    border-radius: $border-radius-big;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-High-Protein {
+      background-color: #ff8a3d;
+      color: $color-grey-dark-3;
+    }
+    &-Vegan {
+      background-color: #44c767;
+    }
+    &-Vegetarian {
+      background-color: #7ed957;
+      color: $color-grey-dark-3;
+    }
+    &-Keto {
+      background-color: #9b6bff;
+    }
+    &-Low-Carb {
+      background-color: #3b82f6;
+    }
+    &-Mediterranean {
+      background-color: #f59e0b;
+      color: $color-grey-dark-3;
+    }
+    &-Gluten-Free {
+      background-color: #06b6d4;
+      color: $color-grey-dark-3;
+    }
+    &-dairy-Free {
+      background-color: #ec4899;
+    }
+    &-Asian {
+      background-color: #ef4444;
+    }
+    &-Italian {
+      background-color: #22c55e;
+    }
+    &-Mexican {
+      background-color: #f97316;
+      color: $color-grey-dark-3;
+    }
+  }
+}

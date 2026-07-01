@@ -1,0 +1,15 @@
+.special-offer-big {
+  display: none;
+  height: 7rem;
+  font-family: "Bee Serif", serif;
+  font-size: 1.7rem;
+  text-align: center;
+  padding: 1rem 5rem;
+  background-color: #f5e6d3;
+  color: #8b4513;
+  letter-spacing: 0.5px;
+
+  @include respond(phone) {
+    display: block;
+  }
+}

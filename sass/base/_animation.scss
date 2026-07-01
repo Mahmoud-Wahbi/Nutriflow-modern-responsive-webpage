@@ -1,0 +1,223 @@
+@keyframes highlight-sweep {
+  0% {
+    background-position: -250% 0;
+  }
+
+  100% {
+    background-position: 250% 0;
+  }
+}
+
+@keyframes move-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 120%));
+  }
+  15% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% - 120%));
+  }
+}
+
+//Progress - animation
+
+$item-duration: 16s;
+$items-count: 3;
+$total-duration: $item-duration * $items-count; // 48s
+
+$p1: (1 / $items-count) * 100%; // 33.3333%
+$p2: (2 / $items-count) * 100%; // 66.6666%
+
+@keyframes progressComplite1 {
+  0% {
+    width: 0;
+    height: 0.8rem;
+  }
+  #{$p1} {
+    width: 97%;
+    height: 0.8rem;
+  }
+  #{$p1 + 0.01%} {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes progressComplite2 {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  #{$p1} {
+    width: 0;
+    height: 0;
+  }
+  #{$p1 + 0.01%} {
+    width: 0;
+    height: 0.8rem;
+  }
+  #{$p2} {
+    width: 97%;
+    height: 0.8rem;
+  }
+  #{$p2 + 0.01%} {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes progressComplite3 {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  #{$p2} {
+    width: 0;
+    height: 0;
+  }
+  #{$p2 + 0.01%} {
+    width: 0;
+    height: 0.8rem;
+  }
+  100% {
+    width: 97%;
+    height: 0.8rem;
+  }
+}
+
+// Comments animation
+@keyframes CommentMove1 {
+  0% {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+
+  1% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  #{$p1} {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  #{$p1 + 1%} {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+
+  #{$p1 + 2%} {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes CommentMove2 {
+  0% {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+
+  #{$p1} {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+
+  #{$p1 + 1%} {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  #{$p2} {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  #{$p2 + 1%} {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+}
+
+@keyframes CommentMove3 {
+  0% {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+
+  #{$p2 } {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+
+  #{$p2 + 1%} {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  99.4% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  99.999% {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+}
+
+@keyframes scaleup-small {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

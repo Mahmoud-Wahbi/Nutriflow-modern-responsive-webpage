@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  overflow-x: hidden;
+
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px , 10px / 16
+
+  //width < 1200
+  @include respond(tab-land) {
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 56.25%
+  }
+
+  //width < 900
+  @include respond(tab-port) {
+    font-size: 55%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  //width > 1800
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12px, 12/16
+  }
+
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-sans-serif;
+  color: $color-grey-dark-3;
+  font-weight: 400;
+  line-height: 1.6;
+
+  // @include respond(tab-port) {
+  //   line-height: 1.7;
+  // }
+}

@@ -1,0 +1,67 @@
+.heading-1 {
+  font-size: 5.2rem;
+  font-weight: 500;
+  line-height: 1.1;
+  color: $color-primary-ultra-lighter;
+
+  @include respond(phone) {
+    font-size: 3.3rem;
+  }
+}
+
+.heading-2 {
+  font-weight: 600;
+  letter-spacing: 0.9%;
+  text-align: center;
+  color: $color-grey-dark-2;
+  font-size: 2.6rem;
+
+  @include respond(tab-port) {
+    font-size: 2.2rem;
+    line-height: 1.75;
+  }
+}
+
+.heading-3 {
+  color: $color-grey-dark-3;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.9%;
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
+}
+
+.heading-4 {
+  color: $color-grey-dark-3;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.9%;
+}
+
+.label {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2.4rem;
+  font-family: "JetBrains Mono", sans-serif;
+  transition: all 0.3s;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-dark 0%,
+    $color-primary 5%,
+    $color-primary-light
+  );
+  background-clip: text;
+  color: transparent;
+  padding: 0 1rem;
+
+  &__meals {
+    grid-column: 1 / -1;
+  }
+
+  &:hover {
+    transform: skewX(7deg) skewY(1deg);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,22 @@
+.section-heading-1 {
+  position: relative;
+  padding: 5rem 4rem;
+  border: 1px dashed $color-grey-light-4;
+  border-bottom: none;
+
+  @include respond(phone) {
+    padding: 5rem 1rem;
+  }
+
+  grid-column: 1 / -1;
+
+  &--no-border {
+    border: 1px dashed $color-grey-light-4;
+    border: none;
+    padding: 3rem 4rem;
+
+    @include respond(phone) {
+      padding: 5rem 0.8rem;
+    }
+  }
+}
